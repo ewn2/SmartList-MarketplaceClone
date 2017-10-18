@@ -10,7 +10,8 @@ Group3 web app
 
 
 ewn2
-(erwin.uppal@gmail.com)
+
+(erwin.uppal@gmail.com)
 
 
 
@@ -21,15 +22,16 @@ ewn2
 
 
 marcoalvarez257
-(marcoalvarez257@gmail.com)
+
+(marcoalvarez257@gmail.com)
 
 
 
 
 
-  3. Jose Rosas 
+  3. Jose Armando Rosas Garcia
 
-Garcia
+
 
 RosasJose
 
