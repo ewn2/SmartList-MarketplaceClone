@@ -4,18 +4,10 @@ Group3 web app
 
 SJSU SmartList
 
-1. Erwin Uppal
+1. Erwin Uppal / ewn2
 
-ewn2
+2. Marco Alvarez / marcoalvarez257
 
-2. Marco Alvarez
+3. Jose Rosas Garcia / RosasJose
 
-marcoalvarez257
-
-3. Jose Armando Rosas Garcia
-
-RosasJose
-
-4. Erik Ramirez
-
-erikrmz
+4. Erik Ramirez / erikrmz
