@@ -1,7 +1,26 @@
 from flask import Flask, render_template, flash, url_for, session, request, abort
 import sqlite3
 
+class account:
 
+    def __init__(self, userid, password, email, phone):
+
+        self.userid = userid
+        self.password = password
+        self.email = email
+        self.phone = phone
+
+    def get_userid(self):
+        return self.userid
+
+    def get_password(self):
+        return self.password
+
+    def get_email(self):
+        return self.email
+
+    def get_phone(self):
+        return self.phone
 
 app = Flask(__name__)
 
@@ -50,3 +69,6 @@ def signup():
 @app.route("/homepage")
 def mainmenu():
     return render_template("Homepage.html")
+
+if __name__ == "__main__":
+	app.run(debug=True)
