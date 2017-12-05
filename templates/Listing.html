@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang = "en">
+<title>Create a Listing</title>
+<link rel="stylesheet" type ="text/css" href="{{ url_for('static', filename = 'style.css')}}">
+
+<body style="background-color:antiquewhite;">
+
+<h1>Create Listing</h1>
+
+
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: goldenrod;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #9EB9D4;
+}
+
+div {
+    border-radius: 5px;
+    background-color: seashell;
+    padding: 20px;
+}
+</style>
+<body>
+
+<center><h2>Enter Listing details</h2>
+</center>
+
+                    <ret>
+                        <a href="/mainmenu">Home</a>
+                    </ret>
+<div>
+
+
+<div class="container">
+
+  <form id="contact" action="{{url_for('basketball')}}" method="POST">
+     {% if success %}
+   <div class="alert alert-success">
+          <strong>{{success}}</strong> 
+    </div>
+    {%endif %}
+    <fieldset>
+    <label for="ListingName">Listing Name</label>
+    <input type="text" id="ListingName" name="ListingName">
+
+    <label for="AskingPrice">Asking Price</label>
+    <input type="text" id="AskingPrice" name="AskingPrice">
+
+    <label for="Description">Description</label>
+    <input type="text" id="Description" name="Description">
+
+    <label for="Picture">Image URL</label>
+    <input type="text" id="Picture" name="Picture">
+
+    <label for="Email">Email</label>
+    <input type="text" id="Email" name="Email">
+
+    <label for="Phone">Phone</label>
+    <input type="text" id="Phone" name="Phone">
+
+    <input type="submit" value="Input">
+    </fieldset>
+  </form>
+</div>
+</div>
+
+</body>
+</body>
+</html>

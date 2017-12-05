@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang = "en">
+<title>Group Project</title>
+<link rel="stylesheet" type ="text/css" href="{{ url_for('static', filename = 'style.css')}}">
+
+<body style="background-color:powderblue;">
+
+<h1>Main Menu</h1>
+
+
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #00FF7F;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #9EB9D4;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #87CEEB;
+    padding: 20px;
+}
+</style>
+<body>
+
+<div>
+  <form action="/session">
+    <input type="submit" value="Manage My Listings">
+  </form>
+  
+  <form action="/resulthub">
+    <input type="submit" value="View Public Listings">
+  </form>
+
+</div>
+
+</body>
+</body>
+</html>

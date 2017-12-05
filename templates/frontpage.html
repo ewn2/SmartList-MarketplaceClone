@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang = "en">
+<title>131 Group 3 Project</title>
+<link rel="stylesheet" type ="text/css" href="{{ url_for('static', filename = 'style.css')}}">
+<h1>SJSU SmartList</h1>
+<h2>Group 3: Erwin Uppal, Marco Alvarez, Jose Rosas, Erik Ramirez</h2>
+
+
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #6495ED;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #9EB9D4;
+}
+
+</style>
+<body>
+    <body style="background-color:antiquewhite;">
+            <img src= "http://www.sjsu.edu/people/annette.nellen/website/SJSULogo2014.png" alt="SJSU" width="50%" height="50%">
+
+            <p>
+                    SJSU SmartList is a marketplace exclusively accessible by SJSU Students. Students are able to browse or post listings with the security that all
+                    involved parties are recorded and accountable, allowing for free and easy personal transactions around campus!
+            </p>
+<div>
+<form action="/mainmenu">
+    <label for="Username">Username</label>
+    <input type="text" id="Username" name="userid" placeholder="Username">
+
+    <label for="Password">Password</label>
+    <input type="text" id="Password" name="password" placeholder="Password">
+
+    <input type="submit" value="Log In">
+</form>
+
+<form action="/signup">
+
+    <input type="submit" value="Sign Up">
+</form>
+
+</div>
+
+
+</body>
+</html>
