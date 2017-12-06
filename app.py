@@ -47,7 +47,8 @@ def signup():
         Sjsuid = request.form['sjsuid']
         email = request.form['email']
         phone = request.form['phone']
-        
+        tempphone = phone.replace("-", " ").replace("(", " ").replace(")", " ")
+        phone = tempphone.replace("  ", " ")
         add_cursor.execute('''INSERT INTO Accounts(userid, password, sjsuid, email, phone) Values (?,?,?,?,?)''', ( Username, Password, Sjsuid, email, phone))
         User_db.commit()
         User_db.close()
@@ -86,7 +87,8 @@ def basketball():
         Picture = request.form['Picture']
         Email = request.form['Email']
         Phone = request.form['Phone']
-      
+        tempphone = Phone.replace("-", " ").replace("(", " ").replace(")", " ")
+        Phone = tempphone.replace("  ", " ")
         add_cursor.execute('''INSERT INTO Listings(  
             ListingName, AskingPrice, Description, Picture, Email, Phone)
             Values(?,?,?,?,?,?)''', (

@@ -13,7 +13,7 @@
   
   <!-- Imports -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-  <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="/static/css/style.css"> 
   <link rel="stylesheet" href="/static/css/book.css">
   <!--<link rel="stylesheet" href="/static/scss/style.css">-->
@@ -21,7 +21,7 @@
   
 </head>
 
-<body>
+<body style="background-color:antiquewhite;">
        <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -58,7 +58,7 @@
           <th>Listing Name</th>   
           <th>Asking Price</th>
           <th>Item Description</th>
-          <th>Link to Picture</th>
+          <th>Picture</th>
           <th>Email</th>
           <th>Phone Number</th>
         </tr>
@@ -72,7 +72,7 @@
         <tr>
           <td>{{key}}</td>
           <td>{{value.get_ListingName()}}</td>
-          <td>{{value.get_AskingPrice()}}</td>
+          <td>${{value.get_AskingPrice()}}</td>
           <td>{{value.get_Description()}}</td>
           <td><img src={{value.get_Picture()}} width=50% height =30%></td>
           <td>{{value.get_Email()}}</td>
