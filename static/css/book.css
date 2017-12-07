@@ -14,7 +14,7 @@ table{
   background-color: #9EB9D4;
  }
 .tbl-content{
-  height:300px;
+  height:100%;
   overflow-x:auto;
   margin-top: 0px;
   border: 1px solid rgba(255,255,255,0.3);
@@ -42,8 +42,8 @@ td{
 
 
 body{
-  background: -webkit-linear-gradient(left, #FAEBD7, #FAEBD7);
-  background: linear-gradient(to right, #FAEBD7, #FAEBD7);
+  background: -webkit-linear-gradient(left, #FAEBD7, #C8BCAC);
+  background: linear-gradient(to right, #FAEBD7, #C8BCAC);
 }
 section{
   margin: 120px;

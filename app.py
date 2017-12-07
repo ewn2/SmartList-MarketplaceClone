@@ -5,10 +5,6 @@ from definer import definer
 
 app = Flask(__name__)
 
-
-#from DatabaseManager import DatabaseManager
-
-
 db = sqlite3.connect('backbone.db', check_same_thread=False)
 cursor = db.cursor()
 
@@ -18,18 +14,18 @@ def main():
         return render_template("frontpage.html")
 @app.route("/frontpage", methods=['GET', 'POST'])
 def frontpage():
-    Username = ""
-    Password = ""
+    Username = request.form['Username']
+    Password = request.form['Password']
     User_db = sqlite3.connect('backbone.db',check_same_thread=False)
-    find_user = ("SELECT * FROM Accounts WHERE userid = ? AND password = ?") 
-    cursor.execute(find_user, [(userid),(password)])
-    results = cursor.fetchall()
-    
-    if results:
-        for i in results:
-            print ("Welcome")
-        return ("exit")
-    return render_template("frontpage.html")
+    cursor.execute("SELECT COUNT(1) FROM Accounts WHERE userid = %s;", [Username]) 
+    if cursor.fetchone()[0]:
+        cursor.execute("SELECT password FROM Accounts WHERE userid = %s;", [Username])
+        for row in cursor.fetchall():
+            if Password == row[0]:
+                return render_template("mainmenu.html")
+            else:
+                flash("Invalid Login Information")
+                return render_template("frontpage.html")
 
 @app.route("/signup", methods=['GET', 'POST'])
 def signup():
@@ -66,7 +62,6 @@ def sessionhub():
 
 @app.route('/Listing', methods=['GET', 'POST'])
 def basketball():
-    #Basketball
     ListingName = None
     AskingPrice = None
     Description = None
@@ -80,7 +75,6 @@ def basketball():
 
         basketball_db = sqlite3.connect('backbone.db',check_same_thread=False)
         add_cursor = basketball_db.cursor()
-        #Basketball
         ListingName = request.form['ListingName']
         AskingPrice = request.form['AskingPrice']
         Description = request.form['Description']
@@ -100,7 +94,7 @@ def basketball():
     return render_template('Listing.html')
     
 @app.route("/resulthub", methods=['GET', 'POST'])
-def bballresults(sport="basketball"):
+def bballresults(currentview="basketball"):
     ID = None
     lname = None
     price = None
