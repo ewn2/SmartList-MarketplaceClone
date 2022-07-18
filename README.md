@@ -1,8 +1,4 @@
-# Group3 web app
-
-Group3 web app
-
-SJSU SmartList
+SmartList web app
 
 1. Erwin Uppal / ewn2
 
